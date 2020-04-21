@@ -75,29 +75,9 @@ class CoEpiNetworkingV4Tests: XCTestCase {
         
         var cal = Calendar.current
         cal.timeZone = TimeZone(abbreviation: "UTC")!
-        
         let startOfDay = cal.startOfDay(for: currentDate)
-        
-        NSLog(startOfDay.description)
-              
+        NSLog("⚡️ \(startOfDay.description)")
         getTcnForDate(startOfDay)
-        
-//        let intervalLengthMillis : Int64 = 6 * 3600 * 1000
-//        let currentMillis = Int64(currentDate.timeIntervalSince1970 * 1000)
-//        let intervalNumber = currentMillis / intervalLengthMillis
-//        let dateformater = DateFormatter()
-//        dateformater.dateFormat = "yyyy-MM-dd"//"yyyy-MM-dd HH:mm:ss ZZZ"
-//        dateformater.timeZone = TimeZone(abbreviation: "UTC")
-//        let formatedDate = dateformater.string(from: currentDate)
-//        let url: String = apiV4 + "/tcnreport?date=\(formatedDate)&intervalNumber=\(intervalNumber)&intervalLengthMs=\(intervalLengthMillis)"
-//
-//        NSLog("intervalLengthMillis : [\(intervalLengthMillis)]")
-//        NSLog("currentMillis : [\(currentMillis)]")
-//        NSLog("intervalNumber : [\(intervalNumber)]")
-//        NSLog("formatedDate : [\(formatedDate)]")
-//        NSLog("url : [\(url)]")
-//
-//        executeGet(url: url)
     }
     
     func testV4PostTcnReport() {
@@ -113,7 +93,7 @@ class CoEpiNetworkingV4Tests: XCTestCase {
         
         let session = Session(configuration:configuration, eventMonitors: [ AlamofireLogger() ])
         let paramsString = "Test payload \(Date().timeIntervalSince1970)"
-        let paramsStringEncoded = Data(paramsString.utf8).base64EncodedString()
+        let paramsStringEncoded = paramsString.toBase64() //Data(paramsString.utf8).base64EncodedString()
         //https://github.com/Alamofire/Alamofire/blob/master/Documentation/AdvancedUsage.md#urlrequestconvertible
         let url = URL(string: urlString)!
         var urlRequest = URLRequest(url: url)
@@ -131,7 +111,7 @@ class CoEpiNetworkingV4Tests: XCTestCase {
                 case .success:
                     expect.fulfill()
                 case .failure(let error):
-                    NSLog("\n\n Request failed with error: \(error)")
+                    NSLog("\n\n⚡️ Request failed with error: \(error)")
                     XCTFail()
                 }
                 
@@ -152,10 +132,10 @@ class CoEpiNetworkingV4Tests: XCTestCase {
            dateformater.timeZone = TimeZone(abbreviation: "UTC")
            let formatedDate = dateformater.string(from: date)
            
-           NSLog("intervalLengthMillis : [\(intervalLengthMillis)]")
-           NSLog("millis : [\(millis)]")
-           NSLog("intervalNumber : [\(intervalNumber)]")
-           NSLog("formatedDate : [\(formatedDate)]")
+           NSLog("⚡️ IntervalLengthMillis : [\(intervalLengthMillis)]")
+           NSLog("⚡️ Millis : [\(millis)]")
+           NSLog("⚡️ IntervalNumber : [\(intervalNumber)]")
+           NSLog("⚡️ FormatedDate : [\(formatedDate)]")
            
            //Single date has 4 6h long intervals:
            for var i : Int64 in 0...3 {
@@ -185,7 +165,7 @@ class CoEpiNetworkingV4Tests: XCTestCase {
               expect.fulfill()
               switch response.result {
               case .success(let JSON):
-                  NSLog("\n Success value and JSON: \(JSON)")
+                  NSLog("\n⚡️ Success value and JSON: \(JSON)")
                   XCTAssertNotNil(JSON)
                   if let stringArray = JSON as? Array<String> {
                     for s in stringArray {
@@ -197,7 +177,7 @@ class CoEpiNetworkingV4Tests: XCTestCase {
                 }
 
               case .failure(let error):
-                  NSLog("\n Request failed with error: \(error)")
+                  NSLog("\n⚡️ Request failed with error: \(error)")
                   XCTFail()
               }
               
@@ -223,7 +203,6 @@ extension String {
         guard let data = Data(base64Encoded: self) else {
             return nil
         }
-
         return String(data: data, encoding: .utf8)
     }
 
