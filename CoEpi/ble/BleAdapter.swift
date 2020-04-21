@@ -14,14 +14,12 @@ class BleAdapter {
     init(cenReadHandler: ContactReceivedHandler) {
         self.cenReadHandler = cenReadHandler
 
-        tcnService = TCNBluetoothService(tcnGenerator: { [myCen] () -> Data in
+        tcnService = TCNBluetoothService(tcnGenerator: { [myCen] in
             let cen = cenReadHandler.provideMyCen()
             myCen.onNext(cen.toHex())
             return cen
-
-        }, tcnFinder: { [discovered] (data, nil) in
-            discovered.onNext(CEN(CEN: data.toHex(), timestamp: Date().coEpiTimestamp))
-
+        }, tcnFinder: { [discovered] data in
+            discovered.onNext(CEN(CEN: data.toHex(), timestamp: .now()))
         }) { error in
             // TODO What kind of errors? Should we notify the user?
             os_log("TCN service error: %@", type: .error, "\(error)")
