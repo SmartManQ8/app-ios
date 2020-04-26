@@ -1,10 +1,16 @@
 import UIKit
+import RxSwift
+import RxCocoa
 
 class HomeViewController: UIViewController{
 
     private let viewModel: HomeViewModel
     
     @IBOutlet weak var tableView: UITableView!
+    
+    private let disposeBag = DisposeBag()
+
+    private var dataSource = HomeListDataSource()
     
         //TODO
         //viewModel.quizTapped()
@@ -41,6 +47,14 @@ class HomeViewController: UIViewController{
         let info = UIBarButtonItem(title: "Info", style: .plain, target: self, action: #selector(info(sender:)))
         info.tintColor = UIColor.black
         navigationItem.leftBarButtonItem = info
+        
+        
+        
+        tableView.register(cellClass: UITableViewCell.self)
+
+        viewModel.homeEntries
+            .drive(tableView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
 
     }
     
@@ -59,4 +73,37 @@ class HomeViewController: UIViewController{
         print("Build : \(build)")
         return "Build: \(build)"
     }
+}
+
+
+private class HomeListDataSource: NSObject, RxTableViewDataSourceType {
+    private var homeEntries: [HomeEntryViewData] = []
+
+    func tableView(_ tableView: UITableView, observedEvent: RxSwift.Event<[HomeEntryViewData]>) {
+        if case let .next(homeEntries) = observedEvent {
+            self.homeEntries = homeEntries
+            tableView.reloadData()
+        }
+    }
+}
+
+
+extension HomeListDataSource: UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        homeEntries.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = tableView.dequeue(cellClass: UITableViewCell.self, forIndexPath: indexPath)
+        let label = cell.textLabel
+        label?.font = .systemFont(ofSize: 14)
+
+        switch homeEntries[indexPath.row] {
+        case .Header(let text):
+            label?.text = text
+            cell.backgroundColor = .lightGray
+        return cell
+    }
+}
 }
