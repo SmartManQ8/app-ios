@@ -74,6 +74,18 @@ extension RootWireFrame : HomeViewModelDelegate {
         rootNavigationController.pushViewController(alertsViewController, animated: true)
         
     }
+    
+    func onboardingTapped() {
+        showOnboarding(parent: homeViewController!)
+    }
+    
+    private func showOnboarding(parent: UIViewController) {
+        
+        let wireFrame: OnboardingWireframe = try! container.resolve()
+        wireFrame.showIfNeeded(parent: parent)
+        onboardingWireframe = wireFrame
+        
+    }
 }
 
 extension RootWireFrame : HealthQuizViewModelDelegate {

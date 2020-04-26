@@ -2,6 +2,7 @@ protocol HomeViewModelDelegate {
     func debugTapped()
     func checkInTapped()
     func seeAlertsTapped()
+    func onboardingTapped()
 }
 
 class HomeViewModel  {
@@ -20,4 +21,9 @@ class HomeViewModel  {
     func seeAlertsTapped() {
         delegate?.seeAlertsTapped()
     }
+    
+    func onboardingTapped() {
+        delegate?.onboardingTapped()
+    
+}
 }
