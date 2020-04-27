@@ -23,9 +23,7 @@ class Dependencies {
     }
 
     private func registerViewModels(container: DependencyContainer) {
-        container.register { HomeViewModel(bleAdapter: try container.resolve(),
-        cenKeyDao: try container.resolve(),
-        api: try container.resolve()) }
+        container.register { HomeViewModel()}
         
         container.register { OnboardingWireframe(container: container) }
         container.register { OnboardingViewModel() }
