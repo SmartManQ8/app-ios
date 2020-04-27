@@ -43,12 +43,9 @@ class HomeViewController: UIViewController{
         info.tintColor = UIColor.black
         navigationItem.leftBarButtonItem = info
         
-        
         tableView.register(cellClass: UITableViewCell.self)
         tableView.tableFooterView = UIView()
         
-        
-
         viewModel.homeEntries
             .drive(tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
@@ -69,33 +66,8 @@ class HomeViewController: UIViewController{
                 }
             })
             .disposed(by: disposeBag)
-        
-
-    }
-    
-  //  private func setupTableView() {
-    //    tableView.rowHeight = UITableView.automaticDimension
-      //  tableView.estimatedRowHeight = 120
-        //tableView.register(cellClass: UITableViewCell.self)
-    //}
-    
-    private func getVersionNumber() -> String{
-        guard let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
-         else{
-            fatalError("Failed to read bundle version")
-        }
-        print("Version : \(version)");
-        return "Version: \(version)"
-    }
-    private func getBuildNumber() -> String {
-        guard let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String else {
-            fatalError("Failed to read build number")
-        }
-        print("Build : \(build)")
-        return "Build: \(build)"
     }
 }
-
 
 private class HomeListDataSource: NSObject, RxTableViewDataSourceType {
     private var homeEntries: [HomeEntryViewData] = []
@@ -106,10 +78,7 @@ private class HomeListDataSource: NSObject, RxTableViewDataSourceType {
             tableView.reloadData()
         }
     }
-    
-
 }
-
 
 extension HomeListDataSource: UITableViewDataSource {
 
@@ -127,9 +96,8 @@ extension HomeListDataSource: UITableViewDataSource {
                 label?.text = text
                 cell.backgroundColor = .clear
                 cell.selectionStyle = UITableViewCell.SelectionStyle.none
+                cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
                 return cell
         }
     }
-    
-    
 }

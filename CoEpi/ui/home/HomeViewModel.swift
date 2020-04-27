@@ -74,9 +74,26 @@ enum HomeEntryViewData {
 private func generateItems() -> [HomeEntryViewData] {
     return items(header: "Health Quiz")
         + items(header: "Contact Alerts")
-        + items(header: "Debug")
+        + items(header: (getVersionNumber() + " " + getBuildNumber()))
 }
 
 private func items(header: String) -> [HomeEntryViewData] {
     [.Header(header)]
+}
+
+
+private func getVersionNumber() -> String{
+    guard let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+     else{
+        fatalError("Failed to read bundle version")
+    }
+    print("Version : \(version)");
+    return "Version: \(version)"
+}
+private func getBuildNumber() -> String {
+    guard let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String else {
+        fatalError("Failed to read build number")
+    }
+    print("Build : \(build)")
+    return "Build: \(build)"
 }
