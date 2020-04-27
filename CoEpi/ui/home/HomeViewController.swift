@@ -11,11 +11,6 @@ class HomeViewController: UIViewController{
     private let disposeBag = DisposeBag()
 
     private var dataSource = HomeListDataSource()
-    
-        //TODO
-        //viewModel.quizTapped()
-        //viewModel.seeAlertsTapped()
-        //viewModel.debugTapped()
 
     
     init(viewModel: HomeViewModel) {
@@ -49,14 +44,40 @@ class HomeViewController: UIViewController{
         navigationItem.leftBarButtonItem = info
         
         
-        
         tableView.register(cellClass: UITableViewCell.self)
+        tableView.tableFooterView = UIView()
+        
+        
 
         viewModel.homeEntries
             .drive(tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
+        
+        tableView.rx.itemSelected
+            .subscribe(onNext: {indexPath in
+                if indexPath[1] == 0{
+                    self.viewModel.quizTapped()
+                }
+                else if indexPath[1] == 1{
+                    self.viewModel.seeAlertsTapped()
+                }
+                else if indexPath[1] == 2{
+                    self.viewModel.debugTapped()
+                }
+                else{
+                    print ("Invalid Selection")
+                }
+            })
+            .disposed(by: disposeBag)
+        
 
     }
+    
+  //  private func setupTableView() {
+    //    tableView.rowHeight = UITableView.automaticDimension
+      //  tableView.estimatedRowHeight = 120
+        //tableView.register(cellClass: UITableViewCell.self)
+    //}
     
     private func getVersionNumber() -> String{
         guard let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
@@ -85,6 +106,8 @@ private class HomeListDataSource: NSObject, RxTableViewDataSourceType {
             tableView.reloadData()
         }
     }
+    
+
 }
 
 
@@ -99,11 +122,14 @@ extension HomeListDataSource: UITableViewDataSource {
         let label = cell.textLabel
         label?.font = .systemFont(ofSize: 14)
 
-        switch homeEntries[indexPath.row] {
-        case .Header(let text):
-            label?.text = text
-            cell.backgroundColor = .lightGray
-        return cell
+        switch homeEntries[indexPath.row]{
+            case .Header(let text):
+                label?.text = text
+                cell.backgroundColor = .clear
+                cell.selectionStyle = UITableViewCell.SelectionStyle.none
+                return cell
+        }
     }
-}
+    
+    
 }
