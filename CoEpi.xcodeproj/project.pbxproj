@@ -13,6 +13,7 @@
 		05E0E4C8244403FE00D27F9A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 05E0E4CA244403FE00D27F9A /* Localizable.strings */; };
 		30DDD30D24587D4A0016FF25 /* CoEpiNetworkingV4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DDD30B24587D4A0016FF25 /* CoEpiNetworkingV4Tests.swift */; };
 		30DDD30F24587E230016FF25 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 30DDD30E24587E230016FF25 /* Alamofire */; };
+		30DDD3112458804E0016FF25 /* TcnLogicV4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DDD3102458804E0016FF25 /* TcnLogicV4.swift */; };
 		30EF94FB242CFC9F007D61C7 /* AlertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EF94F9242CFC9F007D61C7 /* AlertsViewController.swift */; };
 		30EF952E24313F61007D61C7 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EF952824313F61007D61C7 /* Fonts.swift */; };
 		30EF952F24313F61007D61C7 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30EF952A24313F61007D61C7 /* Roboto-Light.ttf */; };
@@ -201,6 +202,7 @@
 		05E0E4CC2444056F00D27F9A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		30DDD30A24587D4A0016FF25 /* CoEpiNetworkingV3Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoEpiNetworkingV3Tests.swift; sourceTree = "<group>"; };
 		30DDD30B24587D4A0016FF25 /* CoEpiNetworkingV4Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoEpiNetworkingV4Tests.swift; sourceTree = "<group>"; };
+		30DDD3102458804E0016FF25 /* TcnLogicV4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TcnLogicV4.swift; sourceTree = "<group>"; };
 		30EF94F9242CFC9F007D61C7 /* AlertsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsViewController.swift; sourceTree = "<group>"; };
 		30EF952824313F61007D61C7 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		30EF952A24313F61007D61C7 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
@@ -648,6 +650,7 @@
 			children = (
 				849FB1162436056500BD1302 /* CenLogic.swift */,
 				8491497E2436946900975344 /* CenMatcher.swift */,
+				30DDD3102458804E0016FF25 /* TcnLogicV4.swift */,
 			);
 			path = logic;
 			sourceTree = "<group>";
@@ -1216,6 +1219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30DDD3112458804E0016FF25 /* TcnLogicV4.swift in Sources */,
 				30DDD30D24587D4A0016FF25 /* CoEpiNetworkingV4Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1413,6 +1417,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SQAPAYXXBX;
 				INFOPLIST_FILE = CoEpiNetworkingTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1433,6 +1438,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SQAPAYXXBX;
 				INFOPLIST_FILE = CoEpiNetworkingTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

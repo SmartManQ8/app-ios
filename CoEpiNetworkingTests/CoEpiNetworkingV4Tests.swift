@@ -121,6 +121,45 @@ class CoEpiNetworkingV4Tests: XCTestCase {
         waitForExpectations(timeout: 15)
     }
     
+    func testV4Crypto(){
+        
+        let count : UInt16 = 25
+        let startIndex : UInt16 = 15
+        let endIndex : UInt16 = 18
+        
+        let crypto = TcnLogicV4()
+        
+        var tck = [UInt8](crypto.tck_0)
+        var tcn: [UInt8]
+        var preceedingTck: [UInt8]?
+        
+        for i: UInt16 in 1...count {
+            print("\(i). ")
+            tck = crypto.tckRatchet(previousKeyBytes: tck)
+            tcn = crypto.tcnGeneration(index: i, tck: tck)
+            
+            if (startIndex - 1 == i){
+                preceedingTck = tck
+            }
+            
+        }
+        
+        let memo = crypto.memoGeneration()
+        
+        if let preceedingTck = preceedingTck {
+            
+            let report = crypto.reportGeneration(preceedingTck: preceedingTck, startIndex: startIndex, endIndex: endIndex, memo: memo)
+            
+            print("Report ← rvk || tck_{j1-1} || le_u16(j1) || le_u16(j2) || memo: \n<\(report.debugDescription)>")
+            
+            crypto.parseReport(report)
+        }else{
+            fatalError("no preceedingTck")
+        }
+        
+        
+    }
+    
     //MARK: Helper functions
     
     private func getTcnForDate(_ date: Date){
