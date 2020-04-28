@@ -9,9 +9,6 @@ class HomeViewController: UIViewController{
     @IBOutlet weak var tableView: UITableView!
     
     private let disposeBag = DisposeBag()
-
-    //private var dataSource = HomeListDataSource()
-
     
     init(viewModel: HomeViewModel) {
         self.viewModel = viewModel
