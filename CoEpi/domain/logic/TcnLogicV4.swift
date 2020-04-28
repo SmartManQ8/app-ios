@@ -2,6 +2,7 @@ import Foundation
 import CryptoKit
 import os.log
 
+@available(iOS 13.0, *)
 class TcnLogicV4 {
     /**
        Parameter Choices. We implement
@@ -29,17 +30,40 @@ class TcnLogicV4 {
     
     let keySize = 32
     
-    init() {
+    convenience init() {
         //https://developer.apple.com/documentation/cryptokit/performing_common_cryptographic_operations
         //Generates a new X25519 private key.
-        let coepiPrivateKey = Curve25519.KeyAgreement.PrivateKey()
-        let coepiPublicKey = coepiPrivateKey.publicKey
+        let coEpiPrivateKey = Curve25519.KeyAgreement.PrivateKey()
+        let coEpiPublicKey = coEpiPrivateKey.publicKey
  
         
-        privateKeyBytes = [UInt8](coepiPrivateKey.rawRepresentation)
-        os_log("PrivateKey bytes <rak>: %{public}@", type: .debug, privateKeyBytes)
-        publicKeyBytes = [UInt8](coepiPrivateKey.publicKey.rawRepresentation)
-        os_log(.debug, "PublicKey bytes <rvk>: %{public}@", publicKeyBytes)
+        let rak = [UInt8](coEpiPrivateKey.rawRepresentation)
+        os_log("PrivateKey bytes <rak>: %{public}@", type: .debug, rak.description)
+        let rvk = [UInt8](coEpiPrivateKey.publicKey.rawRepresentation)
+        os_log(.debug, "PublicKey bytes <rvk>: %{public}@", rvk.description)
+        
+        self.init(rak: rak, rvk: rvk)
+        
+        /*
+        //tck_0 ← H_tck(rak)
+        var buffer = tckDomainSeparator
+        buffer.append(contentsOf: privateKeyBytes)
+        tck_0 = SHA256.hash(data: buffer)
+        
+        //tck_1 ← H_tck(rvk || tck_0)
+        var buffer1 = tckDomainSeparator
+        buffer1.append(contentsOf: publicKeyBytes)
+        buffer1.append(contentsOf: tck_0)
+        tck_1 = SHA256.hash(data: buffer1)
+        */
+        
+        
+
+    }
+    
+    init(rak: [UInt8], rvk: [UInt8]){
+        privateKeyBytes = rak
+        publicKeyBytes = rvk
         
         //tck_0 ← H_tck(rak)
         var buffer = tckDomainSeparator
