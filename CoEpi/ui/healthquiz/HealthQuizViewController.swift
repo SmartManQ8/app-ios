@@ -6,14 +6,16 @@ class HealthQuizViewController: UIViewController, ErrorDisplayer {
     private let viewModel: HealthQuizViewModel
     private let dataSource: HealthQuizQuestionsDataSource = .init()
 
+    @IBOutlet weak var symptomQuestionHeader: UILabel!
     @IBOutlet weak var questionList: UITableView!
+    @IBOutlet weak var submitButton: UIButton!
     
     private let disposeBag = DisposeBag()
     
     init(viewModel: HealthQuizViewModel) {
         self.viewModel = viewModel
         super.init(nibName: String(describing: Self.self), bundle: nil)
-        title = "My Health"
+        title = L10n.Healthquiz.title
         
         dataSource.onChecked = { (question, idx) in
             viewModel.handleAnswer(question: question, idx: idx)
@@ -37,7 +39,7 @@ class HealthQuizViewController: UIViewController, ErrorDisplayer {
 
     override func viewDidLoad() {
         questionList.register(cellClass: QuestionCell.self)
-
+        
         viewModel.rxQuestions
             .drive(questionList.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
@@ -49,6 +51,19 @@ class HealthQuizViewController: UIViewController, ErrorDisplayer {
         viewModel.setActivityIndicatorVisible
             .drive(view.rx.setActivityIndicatorVisible())
             .disposed(by: disposeBag)
+
+        viewModel.submitButtonEnabled
+            .drive(submitButton.rx.isEnabled)
+            .disposed(by: disposeBag)
+
+        // TODO clarify (global) button styles
+        viewModel.submitButtonEnabled
+            .map { $0 ? .systemIndigo : .lightGray }
+            .drive(submitButton.rx.backgroundColor)
+            .disposed(by: disposeBag)
+        
+        symptomQuestionHeader.text = L10n.Healthquiz.symptomQuestion
+        submitButton.setTitle(L10n.Healthquiz.submit, for: .normal)
      }
 }
 

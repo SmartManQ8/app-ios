@@ -32,7 +32,7 @@ class HomeViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let share = UIBarButtonItem(title: "Share", style: .plain, target: self, action: #selector(share(sender:)))
+        let share = UIBarButtonItem(title: L10n.Home.share, style: .plain, target: self, action: #selector(share(sender:)))
         share.tintColor = UIColor.black
         navigationItem.rightBarButtonItem = share
        

@@ -1,31 +1,37 @@
-import Foundation
+import RxSwift
+import os.log
 
-protocol HomeViewModelDelegate {
-    func debugTapped()
-    func checkInTapped()
-    func seeAlertsTapped()
-    func onboardingTapped()
-}
-
-class HomeViewModel  {
-    var delegate: HomeViewModelDelegate?
-    
+class HomeViewModel {
     let title = "CoEpi"
 
+    private let disposeBag = DisposeBag()
+
+    private let rootNav: RootNav
+
+    init(startPermissions: StartPermissions, rootNav: RootNav) {
+        self.rootNav = rootNav
+
+        startPermissions.granted.subscribe(onNext: { granted in
+            os_log("Start permissions granted: %{public}@", log: servicesLog, type: .debug, "\(granted)")
+        }).disposed(by: disposeBag)
+
+        startPermissions.request()
+    }
+
     func debugTapped() {
-        delegate?.debugTapped()
+        rootNav.navigate(command: .to(destination: .debug))
     }
     
     func quizTapped() {
-        delegate?.checkInTapped()
+        rootNav.navigate(command: .to(destination: .quiz))
     }
     
     func seeAlertsTapped() {
-        delegate?.seeAlertsTapped()
+        rootNav.navigate(command: .to(destination: .alerts))
     }
     
     func onboardingTapped() {
-        delegate?.onboardingTapped()
+        rootNav.navigate(command: .to(destination: .onboarding))
     }
 }
     

@@ -8,15 +8,18 @@ class AlertsViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contactAlerts: UITableView!
+    @IBOutlet weak var updateStatusLabel: UILabel!
 
     private let disposeBag = DisposeBag()
+
+    private let refreshControl = UIRefreshControl()
 
     init(viewModel: AlertsViewModel) {
         self.viewModel = viewModel
         super.init(nibName: String(describing: Self.self), bundle: nil)
         
-        title = "Alerts"
-        dataSource.onAcknowledged = { (alert) in
+        title = L10n.Alerts.title
+        dataSource.onAcknowledged = { alert in
             viewModel.acknowledge(alert: alert)
         }
     }
@@ -35,20 +38,34 @@ class AlertsViewController: UIViewController {
         viewModel.alerts
             .drive(contactAlerts.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
+
+        viewModel.updateStatusText
+            .drive(updateStatusLabel.rx.text)
+            .disposed(by: disposeBag)
+
+        refreshControl.rx.controlEvent(.valueChanged)
+            .subscribe(onNext: { [viewModel, refreshControl] in
+                viewModel.updateReports()
+                // Hide refresh control immediately. Progress status is shown in label.
+                refreshControl.endRefreshing()
+            })
+            .disposed(by: disposeBag)
     }
 
     private func setupTableView() {
         contactAlerts.rowHeight = UITableView.automaticDimension
+
+        contactAlerts.addSubview(refreshControl)
         contactAlerts.estimatedRowHeight = 120
         contactAlerts.register(cellClass: AlertCell.self)
     }
 }
 
 class AlertsDataSource: NSObject, RxTableViewDataSourceType {
-    private var alerts: [Alert] = []
-    public var onAcknowledged: ((Alert) -> ())?
+    private var alerts: [AlertViewData] = []
+    public var onAcknowledged: ((AlertViewData) -> ())?
 
-    func tableView(_ tableView: UITableView, observedEvent: RxSwift.Event<[Alert]>) {
+    func tableView(_ tableView: UITableView, observedEvent: RxSwift.Event<[AlertViewData]>) {
         if case let .next(alerts) = observedEvent {
             self.alerts = alerts
             tableView.reloadData()
@@ -65,7 +82,7 @@ extension AlertsDataSource: UITableViewDataSource {
         let cell: UITableViewCell = tableView.dequeue(cellClass: AlertCell.self, forIndexPath: indexPath)
         guard let alertCell = cell as? AlertCell else { return cell }
 
-        let alert: Alert = alerts[indexPath.row]
+        let alert: AlertViewData = alerts[indexPath.row]
         alertCell.setAlert(alert: alert)
         alertCell.onAcknowledged = onAcknowledged
 
