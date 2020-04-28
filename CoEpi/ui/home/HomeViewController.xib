@@ -32,30 +32,5 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="131.25" y="140.49295774647888"/>
         </view>
-        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="health icon" translatesAutoresizingMaskIntoConstraints="NO" id="a5t-De-bYe">
-            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
-            <constraints>
-                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="Eb4-5w-6k8"/>
-                <constraint firstAttribute="height" constant="40" id="Pm1-Gm-oTQ"/>
-                <constraint firstAttribute="width" constant="40" id="Yns-pp-Npz"/>
-                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="pAH-Gp-DWW"/>
-            </constraints>
-            <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
-            <point key="canvasLocation" x="-109" y="535"/>
-        </imageView>
-        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contact icon" translatesAutoresizingMaskIntoConstraints="NO" id="zio-Rs-7WL">
-            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
-            <constraints>
-                <constraint firstAttribute="height" constant="40" id="Dfi-Hp-fOn"/>
-                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Yen-q6-bYs"/>
-                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="fzP-ig-h4P"/>
-                <constraint firstAttribute="width" constant="40" id="zBh-Gy-eZ8"/>
-            </constraints>
-            <point key="canvasLocation" x="-332" y="154"/>
-        </imageView>
     </objects>
-    <resources>
-        <image name="contact icon" width="40" height="42.5"/>
-        <image name="health icon" width="40" height="39"/>
-    </resources>
 </document>

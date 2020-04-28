@@ -48,8 +48,10 @@ class HomeViewController: UIViewController{
         tableView.rowHeight = 120.0
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        
+        let images = ["health icon", "contact icon", ""]
 
-        Observable.just(["Health Quiz", "Contact Alerts", (getVersionNumber() + " " + getBuildNumber())])
+        Observable.just(["My Health", "Contact Alerts", (getVersionNumber() + " " + getBuildNumber())])
             .bind(to: tableView.rx.items) { (tableView, row, element) in
                 let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
                 cell.textLabel?.text = "\(element)"
@@ -57,6 +59,7 @@ class HomeViewController: UIViewController{
                 cell.backgroundColor = .clear
                 cell.selectionStyle = UITableViewCell.SelectionStyle.none
                 cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
+                cell.imageView?.image = UIImage(named: images[row])
                 return cell
             }
             .disposed(by: disposeBag)
