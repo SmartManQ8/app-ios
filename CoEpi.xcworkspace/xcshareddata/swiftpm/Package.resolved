@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "Action",
+        "repositoryURL": "https://github.com/RxSwiftCommunity/Action",
+        "state": {
+          "branch": null,
+          "revision": "cdade63f7bbe1f5e1eff7779e5858a796dc2c001",
+          "version": "4.0.1"
+        }
+      },
+      {
         "package": "Alamofire",
         "repositoryURL": "https://github.com/Alamofire/Alamofire",
         "state": {
@@ -87,7 +96,7 @@
         "repositoryURL": "https://github.com/ReactiveX/RxSwift",
         "state": {
           "branch": null,
-          "revision": "712ff5348ece316f5422f8cd371cb4fef4f0f962",
+          "revision": "002d325b0bdee94e7882e1114af5ff4fe1e96afa",
           "version": "5.1.1"
         }
       },
@@ -122,9 +131,9 @@
         "package": "TCNClient",
         "repositoryURL": "https://github.com/TCNCoalition/tcn-client-ios",
         "state": {
-          "branch": "develop",
+          "branch": null,
           "revision": "f3735e00e7c51fb8365561384e8fd7e2a656aeb6",
-          "version": null
+          "version": "0.4.2"
         }
       }
     ]
