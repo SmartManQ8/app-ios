@@ -2,6 +2,15 @@ import UIKit
 
 class HomeViewController: UIViewController {
     private let viewModel: HomeViewModel
+    
+    
+    
+    @IBAction func TESTING(_ sender: Any) {
+        print ("TESTING")
+        viewModel.testTapped()
+    }
+    
+    
 
     @IBOutlet weak var stackContainerView: UIView!
     @IBOutlet weak var stackContainerViewTwo: UIView!

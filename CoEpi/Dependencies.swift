@@ -26,6 +26,19 @@ class Dependencies {
         container.register { HomeViewModel(startPermissions: try container.resolve(), rootNav: try container.resolve()) }
         container.register { OnboardingWireframe(container: container) }
         container.register { OnboardingViewModel() }
+        
+        
+        container.register { ThankYouViewModel() }
+        container.register { BreathlessViewModel() }
+        container.register { CoughViewModel1() }
+        container.register { CoughViewModel2() }
+        container.register { CoughViewModel3() }
+        container.register { FeverViewModel1() }
+        container.register { FeverViewModel2() }
+        container.register { FeverViewModel3() }
+        container.register { FeverViewModel4() }
+        container.register { SymptomReportViewModel() }
+        
         container.register { HealthQuizViewModel(symptomRepo: try container.resolve(), rootNav: try container.resolve()) }
         container.register { AlertsViewModel(alertRepo: try container.resolve()) }
 

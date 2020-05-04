@@ -19,5 +19,15 @@ enum RootNavDestination {
     case quiz
     case debug
     case alerts
+    case thankYou
+    case breathless
+    case cough1
+    case cough2
+    case cough3
+    case fever1
+    case fever2
+    case fever3
+    case fever4
+    case symptomReport
 }
 

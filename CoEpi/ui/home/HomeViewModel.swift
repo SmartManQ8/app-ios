@@ -29,4 +29,8 @@ class HomeViewModel {
     func seeAlertsTapped() {
         rootNav.navigate(command: .to(destination: .alerts))
     }
+    
+    func testTapped() {
+        rootNav.navigate(command: .to(destination: .symptomReport))
+    }
 }
