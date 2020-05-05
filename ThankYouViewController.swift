@@ -3,6 +3,18 @@ import UIKit
 class ThankYouViewController: UIViewController {
     private let viewModel: ThankYouViewModel
     
+    @IBAction func moreButtonAction(_ sender: UIButton) {
+
+     }
+    
+    @IBAction func viewExposuresButtonAction(_ sender: UIButton) {
+        
+     }
+    
+    @IBAction func homeButtonAction(_ sender: UIButton) {
+
+     }
+    
     
     init(viewModel: ThankYouViewModel) {
         self.viewModel = viewModel

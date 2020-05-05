@@ -2,6 +2,17 @@ import UIKit
 
 class FeverViewController3Other: UIViewController {
     private let viewModel: FeverViewModel3Other
+    //text input
+    @IBOutlet weak var textInput: UITextField!
+    
+    //button actions
+    @IBAction func skipButtonAction(_ sender: UIButton) {
+
+    }
+    
+    @IBAction func submitButtonAction(_ sender: UIButton) {
+
+    }
     
     
     init(viewModel: FeverViewModel3Other) {

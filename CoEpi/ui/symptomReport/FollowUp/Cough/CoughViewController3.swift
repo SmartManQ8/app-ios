@@ -3,6 +3,23 @@ import UIKit
 class CoughViewController3: UIViewController {
     private let viewModel: CoughViewModel3
     
+    //action buttons
+    @IBAction func betterButtonAction(_ sender: UIButton) {
+
+    }
+    
+    @IBAction func worseButtonAction(_ sender: UIButton) {
+
+    }
+    
+    @IBAction func sameButtonAction(_ sender: UIButton) {
+
+    }
+    
+    @IBAction func skipButtonAction(_ sender: UIButton) {
+
+    }
+    
     
     init(viewModel: CoughViewModel3) {
         self.viewModel = viewModel

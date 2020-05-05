@@ -3,6 +3,22 @@ import UIKit
 class FeverViewController1: UIViewController {
     private let viewModel: FeverViewModel1
     
+    //days input
+    @IBOutlet weak var dasyInput: UITextField!
+    
+    //action buttons
+    @IBAction func unknownButtonAction(_ sender: UIButton) {
+
+    }
+    
+    @IBAction func submitButtonAction(_ sender: UIButton) {
+
+    }
+    
+    @IBAction func skipButtonAction(_ sender: UIButton) {
+
+    }
+    
     
     init(viewModel: FeverViewModel1) {
         self.viewModel = viewModel

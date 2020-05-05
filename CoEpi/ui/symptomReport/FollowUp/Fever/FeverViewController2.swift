@@ -3,6 +3,19 @@ import UIKit
 class FeverViewController2: UIViewController {
     private let viewModel: FeverViewModel2
     
+    //button actions
+    @IBAction func yesButtonAction(_ sender: UIButton) {
+
+    }
+    
+    @IBAction func noButtonAction(_ sender: UIButton) {
+
+    }
+    
+    @IBAction func skipButtonAction(_ sender: UIButton) {
+
+    }
+    
     
     init(viewModel: FeverViewModel2) {
         self.viewModel = viewModel

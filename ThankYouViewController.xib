@@ -27,16 +27,25 @@
                             <rect key="frame" x="12" y="138" width="302" height="42"/>
                             <state key="normal" backgroundImage="MoreSymptomsButton"/>
                             <state key="highlighted" backgroundImage="MoreSymptomsButton_Selected"/>
+                            <connections>
+                                <action selector="moreButtonAction:" destination="-1" eventType="touchUpInside" id="Uyw-aD-ibM"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLB-Jd-ZYK">
                             <rect key="frame" x="12" y="210" width="302" height="42"/>
                             <state key="normal" backgroundImage="ViewExposuresButton"/>
                             <state key="highlighted" backgroundImage="ViewExposuresButton_Selected"/>
+                            <connections>
+                                <action selector="viewExposuresButtonAction:" destination="-1" eventType="touchUpInside" id="DIV-Ji-fox"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycx-9P-MPc">
                             <rect key="frame" x="12" y="282" width="302" height="42"/>
                             <state key="normal" backgroundImage="ReturnHomeButton"/>
                             <state key="highlighted" backgroundImage="ReturnHomeButton_Selected"/>
+                            <connections>
+                                <action selector="homeButtonAction:" destination="-1" eventType="touchUpInside" id="6Rm-B5-onm"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>

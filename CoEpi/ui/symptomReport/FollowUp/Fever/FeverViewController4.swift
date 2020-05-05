@@ -3,6 +3,27 @@ import UIKit
 class FeverViewController4: UIViewController {
     private let viewModel: FeverViewModel4
     
+    //numberInput
+    @IBOutlet weak var numberInput: UITextField!
+    
+    //button actions
+    @IBAction func unknownButtonAction(_ sender: UIButton) {
+
+    }
+    
+    @IBAction func submitButtonAction(_ sender: UIButton) {
+
+    }
+    
+    @IBAction func skipButtonAction(_ sender: UIButton) {
+
+    }
+    
+    @IBAction func scaleButtonAction(_ sender: UIButton) {
+
+    }
+    
+    
     
     init(viewModel: FeverViewModel4) {
         self.viewModel = viewModel

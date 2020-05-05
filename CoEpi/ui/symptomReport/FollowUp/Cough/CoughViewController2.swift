@@ -3,6 +3,22 @@ import UIKit
 class CoughViewController2: UIViewController {
     private let viewModel: CoughViewModel2
     
+    //day input field
+    @IBOutlet weak var daysInput: UITextField!
+    
+    //button actions
+    @IBAction func unknownButtonAction(_ sender: UIButton) {
+
+     }
+    
+    @IBAction func submitButtonAction(_ sender: UIButton) {
+
+    }
+    
+    @IBAction func skipButtonAction(_ sender: UIButton) {
+
+    }
+    
     
     init(viewModel: CoughViewModel2) {
         self.viewModel = viewModel

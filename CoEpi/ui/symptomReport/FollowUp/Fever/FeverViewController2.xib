@@ -33,6 +33,9 @@
                             </constraints>
                             <state key="normal" backgroundImage="YesButton"/>
                             <state key="highlighted" backgroundImage="YesButton_Selected"/>
+                            <connections>
+                                <action selector="yesButtonAction:" destination="-1" eventType="touchUpInside" id="OTS-ky-Ya4"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmj-hv-Hof">
                             <rect key="frame" x="202" y="0.0" width="192" height="192"/>
@@ -41,6 +44,9 @@
                             </constraints>
                             <state key="normal" backgroundImage="NoButton"/>
                             <state key="highlighted" backgroundImage="NoButton_Selected"/>
+                            <connections>
+                                <action selector="noButtonAction:" destination="-1" eventType="touchUpInside" id="c5P-WX-5e1"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>
@@ -49,6 +55,9 @@
                     <state key="normal" title="Skip">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="skipButtonAction:" destination="-1" eventType="touchUpInside" id="pmy-mY-1Li"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

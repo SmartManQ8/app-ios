@@ -3,6 +3,26 @@ import UIKit
 class FeverViewController3: UIViewController {
     private let viewModel: FeverViewModel3
     
+    @IBAction func mouthButtonAction(_ sender: UIButton) {
+
+    }
+    
+    @IBAction func earButtonAction(_ sender: UIButton) {
+
+    }
+    
+    @IBAction func armpitButtonAction(_ sender: UIButton) {
+
+    }
+    
+    @IBAction func otherButtonAction(_ sender: UIButton) {
+
+    }
+    
+    @IBAction func skipButtonAction(_ sender: UIButton) {
+
+    }
+    
     
     init(viewModel: FeverViewModel3) {
         self.viewModel = viewModel

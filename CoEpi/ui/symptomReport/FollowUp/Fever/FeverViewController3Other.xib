@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeverViewController3Other" customModule="CoEpi" customModuleProvider="target">
             <connections>
+                <outlet property="textInput" destination="d5w-Gj-HB2" id="xNk-gf-4yx"/>
                 <outlet property="view" destination="Yg9-MW-PKd" id="sku-fz-gXG"/>
             </connections>
         </placeholder>
@@ -31,7 +32,6 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="9IW-ze-nRj"/>
                             </constraints>
-                            <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="28"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                         </textField>
@@ -54,6 +54,9 @@
                                             </fragment>
                                         </attributedString>
                                     </state>
+                                    <connections>
+                                        <action selector="skipButtonAction:" destination="-1" eventType="touchUpInside" id="Rxf-b3-6Bj"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T62-MY-cl5">
                                     <rect key="frame" x="172.5" y="0.0" width="141.5" height="48"/>
@@ -61,6 +64,9 @@
                                         <constraint firstAttribute="width" secondItem="T62-MY-cl5" secondAttribute="height" multiplier="38:13" id="YhM-Y5-lJ1"/>
                                     </constraints>
                                     <state key="normal" backgroundImage="SubmitButton_Selected"/>
+                                    <connections>
+                                        <action selector="submitButtonAction:" destination="-1" eventType="touchUpInside" id="oMP-8j-I9F"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>

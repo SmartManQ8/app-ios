@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeverViewController1" customModule="CoEpi" customModuleProvider="target">
             <connections>
+                <outlet property="dasyInput" destination="emU-zu-gep" id="cdy-2k-agx"/>
                 <outlet property="view" destination="x2Q-N6-Xmw" id="GnQ-oD-zTw"/>
             </connections>
         </placeholder>
@@ -34,7 +35,6 @@
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="emU-zu-gep" secondAttribute="height" multiplier="73:24" id="PFF-0m-vbV"/>
                                     </constraints>
-                                    <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                 </textField>
@@ -58,6 +58,9 @@
                                         <constraint firstAttribute="width" secondItem="iky-2v-L9z" secondAttribute="height" multiplier="139:39" id="cdg-Tl-8Lu"/>
                                     </constraints>
                                     <state key="normal" backgroundImage="UnknownButton"/>
+                                    <connections>
+                                        <action selector="unknownButtonAction:" destination="-1" eventType="touchUpInside" id="og5-cw-RAu"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9z-cQ-12D">
                                     <rect key="frame" x="172.5" y="0.0" width="141.5" height="48.5"/>
@@ -65,6 +68,9 @@
                                         <constraint firstAttribute="width" secondItem="l9z-cQ-12D" secondAttribute="height" multiplier="38:13" id="KDe-Zp-ZbZ"/>
                                     </constraints>
                                     <state key="normal" backgroundImage="SubmitButton_Selected"/>
+                                    <connections>
+                                        <action selector="submitButtonAction:" destination="-1" eventType="touchUpInside" id="YzL-IR-eJx"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
@@ -81,6 +87,9 @@
                     <state key="normal" title="Skip">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="skipButtonAction:" destination="-1" eventType="touchUpInside" id="eJT-L7-WW2"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -3,13 +3,18 @@ import UIKit
 class CoughViewController1: UIViewController {
     private let viewModel: CoughViewModel1
     
-    
-    //Button Labels
-    
-    
     //Button Actions
+    @IBAction func wetButtonAction(_ sender: UIButton) {
+        
+    }
     
+    @IBAction func dryButtonAction(_ sender: UIButton) {
+
+     }
     
+    @IBAction func skipButtonAction(_ sender: UIButton) {
+
+     }
     
     
     

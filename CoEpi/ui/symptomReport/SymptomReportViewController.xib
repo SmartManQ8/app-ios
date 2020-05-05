@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SymptomReportViewController" customModule="CoEpi" customModuleProvider="target">
             <connections>
+                <outlet property="acheButtonLabel" destination="v0b-Sa-yN1" id="wN7-rd-c6x"/>
+                <outlet property="breathlessButtonLabel" destination="Rae-bS-c65" id="VM6-Eg-dw5"/>
+                <outlet property="coughButtonLabel" destination="gVh-TZ-dYr" id="8CZ-nt-ufJ"/>
+                <outlet property="diarrheaButtonLabel" destination="YHe-VN-N41" id="qeV-jS-q5J"/>
+                <outlet property="feverButtonLabel" destination="bDp-nU-fcm" id="CXc-n5-0HT"/>
+                <outlet property="lossButtonLabel" destination="3Y2-gP-YXz" id="R1i-oj-oln"/>
+                <outlet property="noSymptomsButtonLabel" destination="WmM-73-lcD" id="oRd-w2-A6P"/>
+                <outlet property="noseButtonLabel" destination="Bnc-uQ-cf9" id="o4u-US-xNI"/>
+                <outlet property="otherSymptomsButtonLabel" destination="tVM-ZP-u7V" id="wU1-KV-svA"/>
+                <outlet property="submitButtonLabel" destination="oZb-xH-Oa5" id="CIs-sV-QlO"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Q4d-N1-ycu"/>
             </connections>
         </placeholder>
@@ -20,51 +30,86 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yKF-Yc-ieG">
                     <rect key="frame" x="33.666666666666657" y="191" width="341" height="499"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmM-73-lcD">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmM-73-lcD">
                             <rect key="frame" x="0.0" y="0.0" width="341" height="48.333333333333336"/>
                             <state key="normal" backgroundImage="NoSymptomsButton"/>
                             <state key="selected" backgroundImage="NoSymptomsButton_Selected"/>
                             <state key="highlighted" backgroundImage="NoSymptomsButton_Selected"/>
+                            <connections>
+                                <action selector="noSymptomsButtonAction:" destination="-1" eventType="touchUpInside" id="ssg-n8-0oa"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVh-TZ-dYr">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVh-TZ-dYr">
                             <rect key="frame" x="0.0" y="56.333333333333343" width="341" height="48.333333333333343"/>
                             <state key="normal" backgroundImage="CoughButton"/>
                             <state key="selected" backgroundImage="CoughButton_Selected"/>
+                            <state key="highlighted" backgroundImage="CoughButton_Selected"/>
+                            <connections>
+                                <action selector="coughButtonAction:" destination="-1" eventType="touchUpInside" id="CV3-x2-JQv"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rae-bS-c65">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rae-bS-c65">
                             <rect key="frame" x="0.0" y="112.66666666666667" width="341" height="48.333333333333329"/>
                             <state key="normal" backgroundImage="BreathlessnessButton"/>
                             <state key="selected" backgroundImage="BreathlessnessButton_Selected"/>
+                            <state key="highlighted" backgroundImage="BreathlessnessButton_Selected"/>
+                            <connections>
+                                <action selector="breathlessButtonAction:" destination="-1" eventType="touchUpInside" id="1Rz-wa-Crx"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDp-nU-fcm">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDp-nU-fcm">
                             <rect key="frame" x="0.0" y="169" width="341" height="48.333333333333343"/>
                             <state key="normal" backgroundImage="FeverButton"/>
                             <state key="selected" backgroundImage="FeverButton_Selected"/>
+                            <state key="highlighted" backgroundImage="FeverButton_Selected"/>
+                            <connections>
+                                <action selector="feverButtonAction:" destination="-1" eventType="touchUpInside" id="5uy-VT-03B"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0b-Sa-yN1">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0b-Sa-yN1">
                             <rect key="frame" x="0.0" y="225.33333333333331" width="341" height="48.333333333333314"/>
                             <state key="normal" backgroundImage="AchesButton"/>
                             <state key="selected" backgroundImage="AchesButton_Selected"/>
+                            <state key="highlighted" backgroundImage="AchesButton_Selected"/>
+                            <connections>
+                                <action selector="acheButtonAction:" destination="-1" eventType="touchUpInside" id="ytI-mJ-oPs"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Y2-gP-YXz">
                             <rect key="frame" x="0.0" y="281.66666666666669" width="341" height="48.333333333333314"/>
                             <state key="normal" backgroundImage="LostButton"/>
                             <state key="selected" backgroundImage="LostButton_Selected"/>
+                            <state key="highlighted" backgroundImage="LostButton_Selected"/>
+                            <connections>
+                                <action selector="lossButtonAction:" destination="-1" eventType="touchUpInside" id="8Yg-ek-wEt"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHe-VN-N41">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHe-VN-N41">
                             <rect key="frame" x="0.0" y="338" width="341" height="48.333333333333314"/>
                             <state key="normal" backgroundImage="DiarrheaButton"/>
                             <state key="selected" backgroundImage="DiarrheaButton_Selected"/>
+                            <state key="highlighted" backgroundImage="DiarrheaButton_Selected"/>
+                            <connections>
+                                <action selector="diarrheaButtonAction:" destination="-1" eventType="touchUpInside" id="6dY-Fo-5yK"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bnc-uQ-cf9">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bnc-uQ-cf9">
                             <rect key="frame" x="0.0" y="394.33333333333337" width="341" height="48.333333333333314"/>
                             <state key="normal" backgroundImage="NoseButton"/>
                             <state key="selected" backgroundImage="NoseButton_Selected"/>
+                            <state key="highlighted" backgroundImage="NoseButton_Selected"/>
+                            <connections>
+                                <action selector="noseButtonAction:" destination="-1" eventType="touchUpInside" id="z5K-75-69B"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVM-ZP-u7V">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVM-ZP-u7V">
                             <rect key="frame" x="0.0" y="450.66666666666663" width="341" height="48.333333333333314"/>
                             <state key="normal" backgroundImage="OtherSymptomsButton"/>
                             <state key="selected" backgroundImage="OtherSymptomsButton_Selected"/>
+                            <state key="highlighted" backgroundImage="OtherSymptomsButton_Selected"/>
+                            <connections>
+                                <action selector="otherSymptomsButtonAction:" destination="-1" eventType="touchUpInside" id="qE6-zt-CH3"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>
@@ -87,6 +132,9 @@
                         <constraint firstAttribute="width" secondItem="oZb-xH-Oa5" secondAttribute="height" multiplier="3:1" id="YvJ-Cb-sR8"/>
                     </constraints>
                     <state key="normal" backgroundImage="SubmitButton_Selected"/>
+                    <connections>
+                        <action selector="submitButtonAction:" destination="-1" eventType="touchUpInside" id="6n3-H6-HWh"/>
+                    </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="SymptomsToday" translatesAutoresizingMaskIntoConstraints="NO" id="8Md-Wi-uVx">
                     <rect key="frame" x="33" y="104" width="348" height="79"/>

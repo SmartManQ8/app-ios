@@ -33,11 +33,17 @@
                                     <rect key="frame" x="0.0" y="0.0" width="134" height="135"/>
                                     <state key="normal" backgroundImage="MouthButton"/>
                                     <state key="highlighted" backgroundImage="MouthButton_Selected"/>
+                                    <connections>
+                                        <action selector="mouthButtonAction:" destination="-1" eventType="touchUpInside" id="5ix-tW-zvz"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z3j-aY-bbE">
                                     <rect key="frame" x="144" y="0.0" width="135" height="135"/>
                                     <state key="normal" backgroundImage="EarButton"/>
                                     <state key="highlighted" backgroundImage="EarButton_Selected"/>
+                                    <connections>
+                                        <action selector="earButtonAction:" destination="-1" eventType="touchUpInside" id="GON-Xf-BKE"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
@@ -48,11 +54,17 @@
                                     <rect key="frame" x="0.0" y="0.0" width="133" height="133"/>
                                     <state key="normal" backgroundImage="ArmpitButton"/>
                                     <state key="highlighted" backgroundImage="ArmpitButton_Selected"/>
+                                    <connections>
+                                        <action selector="armpitButtonAction:" destination="-1" eventType="touchUpInside" id="dRl-Ac-m5u"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKa-nE-5Ko">
                                     <rect key="frame" x="143" y="0.0" width="133" height="133"/>
                                     <state key="normal" backgroundImage="OtherButton"/>
                                     <state key="highlighted" backgroundImage="OtherButton_Selected"/>
+                                    <connections>
+                                        <action selector="otherButtonAction:" destination="-1" eventType="touchUpInside" id="J0U-Cb-H3g"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
@@ -63,6 +75,9 @@
                     <state key="normal" title="Skip">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="skipButtonAction:" destination="-1" eventType="touchUpInside" id="3RO-zd-jHj"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

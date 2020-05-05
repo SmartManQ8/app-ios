@@ -30,16 +30,25 @@
                             <rect key="frame" x="0.0" y="0.0" width="314" height="62"/>
                             <state key="normal" backgroundImage="BetterButton"/>
                             <state key="highlighted" backgroundImage="BetterButton_Selected"/>
+                            <connections>
+                                <action selector="betterButtonAction:" destination="-1" eventType="touchUpInside" id="bKO-18-6tn"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ui-1B-6uO">
                             <rect key="frame" x="0.0" y="87" width="314" height="59"/>
                             <state key="normal" backgroundImage="WorseButton"/>
                             <state key="highlighted" backgroundImage="WorseButton_Selected"/>
+                            <connections>
+                                <action selector="worseButtonAction:" destination="-1" eventType="touchUpInside" id="an7-IY-grQ"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VxT-rb-ljy">
                             <rect key="frame" x="0.0" y="171" width="314" height="61"/>
                             <state key="normal" backgroundImage="SameButton"/>
                             <state key="highlighted" backgroundImage="SameButton_Selected"/>
+                            <connections>
+                                <action selector="sameButtonAction:" destination="-1" eventType="touchUpInside" id="R25-AS-kYz"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>
@@ -48,6 +57,9 @@
                     <state key="normal" title="Skip">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="skipButtonAction:" destination="-1" eventType="touchUpInside" id="xUw-Hg-oZQ"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

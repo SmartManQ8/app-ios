@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CoughViewController2" customModule="CoEpi" customModuleProvider="target">
             <connections>
+                <outlet property="daysInput" destination="0Ao-xA-I4m" id="LwC-Rm-xs1"/>
                 <outlet property="view" destination="iN0-l3-epB" id="gxB-Fo-tyV"/>
             </connections>
         </placeholder>
@@ -34,7 +35,6 @@
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="0Ao-xA-I4m" secondAttribute="height" multiplier="73:24" id="vFU-j4-dYF"/>
                                     </constraints>
-                                    <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                 </textField>
@@ -58,6 +58,9 @@
                                         <constraint firstAttribute="width" secondItem="c8o-zr-cck" secondAttribute="height" multiplier="139:39" id="Dvh-Oj-Nmv"/>
                                     </constraints>
                                     <state key="normal" backgroundImage="UnknownButton"/>
+                                    <connections>
+                                        <action selector="unknownButtonAction:" destination="-1" eventType="touchUpInside" id="bfu-aF-Rwp"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NhT-mO-Llb">
                                     <rect key="frame" x="172.5" y="0.0" width="141.5" height="48.5"/>
@@ -65,6 +68,9 @@
                                         <constraint firstAttribute="width" secondItem="NhT-mO-Llb" secondAttribute="height" multiplier="38:13" id="6du-Jw-vgq"/>
                                     </constraints>
                                     <state key="normal" backgroundImage="SubmitButton_Selected"/>
+                                    <connections>
+                                        <action selector="submitButtonAction:" destination="-1" eventType="touchUpInside" id="ROq-gj-XLa"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
@@ -81,6 +87,9 @@
                     <state key="normal" title="Skip">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="skipButtonAction:" destination="-1" eventType="touchUpInside" id="aO4-JT-QpY"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
