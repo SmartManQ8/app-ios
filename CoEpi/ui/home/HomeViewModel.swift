@@ -21,16 +21,16 @@ class HomeViewModel {
     func debugTapped() {
         rootNav.navigate(command: .to(destination: .debug))
     }
-    
+
     func quizTapped() {
         rootNav.navigate(command: .to(destination: .quiz))
     }
-    
+
     func seeAlertsTapped() {
         rootNav.navigate(command: .to(destination: .alerts))
     }
-    
+
     func testTapped() {
-        rootNav.navigate(command: .to(destination: .thankYou))
+        rootNav.navigate(command: .to(destination: .symptomReport))
     }
 }
