@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,108 +17,116 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="yKF-Yc-ieG">
-                    <rect key="frame" x="56" y="259" width="302" height="378"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yKF-Yc-ieG">
+                    <rect key="frame" x="33.666666666666657" y="191" width="341" height="499"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmM-73-lcD">
-                            <rect key="frame" x="0.0" y="0.0" width="302" height="42"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="WmM-73-lcD" secondAttribute="height" multiplier="151:21" id="N7F-If-KgY"/>
-                            </constraints>
+                            <rect key="frame" x="0.0" y="0.0" width="341" height="48.333333333333336"/>
                             <state key="normal" backgroundImage="NoSymptomsButton"/>
+                            <state key="selected" backgroundImage="NoSymptomsButton_Selected"/>
+                            <state key="highlighted" backgroundImage="NoSymptomsButton_Selected"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVh-TZ-dYr">
-                            <rect key="frame" x="0.0" y="42" width="302" height="42"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="gVh-TZ-dYr" secondAttribute="height" multiplier="151:21" id="Nke-4b-lGf"/>
-                            </constraints>
+                            <rect key="frame" x="0.0" y="56.333333333333343" width="341" height="48.333333333333343"/>
                             <state key="normal" backgroundImage="CoughButton"/>
+                            <state key="selected" backgroundImage="CoughButton_Selected"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rae-bS-c65">
-                            <rect key="frame" x="0.0" y="84" width="302" height="42"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="Rae-bS-c65" secondAttribute="height" multiplier="151:21" id="S4w-Mm-RSC"/>
-                            </constraints>
+                            <rect key="frame" x="0.0" y="112.66666666666667" width="341" height="48.333333333333329"/>
                             <state key="normal" backgroundImage="BreathlessnessButton"/>
+                            <state key="selected" backgroundImage="BreathlessnessButton_Selected"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDp-nU-fcm">
-                            <rect key="frame" x="0.0" y="126" width="302" height="42"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="bDp-nU-fcm" secondAttribute="height" multiplier="151:21" id="JEp-Rr-slk"/>
-                            </constraints>
+                            <rect key="frame" x="0.0" y="169" width="341" height="48.333333333333343"/>
                             <state key="normal" backgroundImage="FeverButton"/>
+                            <state key="selected" backgroundImage="FeverButton_Selected"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0b-Sa-yN1">
-                            <rect key="frame" x="0.0" y="168" width="302" height="42"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="v0b-Sa-yN1" secondAttribute="height" multiplier="151:21" id="Oii-09-juM"/>
-                            </constraints>
+                            <rect key="frame" x="0.0" y="225.33333333333331" width="341" height="48.333333333333314"/>
                             <state key="normal" backgroundImage="AchesButton"/>
+                            <state key="selected" backgroundImage="AchesButton_Selected"/>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Y2-gP-YXz">
-                            <rect key="frame" x="0.0" y="210" width="302" height="42"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="3Y2-gP-YXz" secondAttribute="height" multiplier="151:21" id="0zd-Z0-ECN"/>
-                            </constraints>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Y2-gP-YXz">
+                            <rect key="frame" x="0.0" y="281.66666666666669" width="341" height="48.333333333333314"/>
                             <state key="normal" backgroundImage="LostButton"/>
+                            <state key="selected" backgroundImage="LostButton_Selected"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHe-VN-N41">
-                            <rect key="frame" x="0.0" y="252" width="302" height="42"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="YHe-VN-N41" secondAttribute="height" multiplier="151:21" id="dKY-Rd-Il2"/>
-                            </constraints>
+                            <rect key="frame" x="0.0" y="338" width="341" height="48.333333333333314"/>
                             <state key="normal" backgroundImage="DiarrheaButton"/>
+                            <state key="selected" backgroundImage="DiarrheaButton_Selected"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bnc-uQ-cf9">
-                            <rect key="frame" x="0.0" y="294" width="302" height="42"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="Bnc-uQ-cf9" secondAttribute="height" multiplier="151:21" id="vAy-MS-xG9"/>
-                            </constraints>
+                            <rect key="frame" x="0.0" y="394.33333333333337" width="341" height="48.333333333333314"/>
                             <state key="normal" backgroundImage="NoseButton"/>
+                            <state key="selected" backgroundImage="NoseButton_Selected"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVM-ZP-u7V">
-                            <rect key="frame" x="0.0" y="336" width="302" height="42"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="tVM-ZP-u7V" secondAttribute="height" multiplier="151:21" id="GwU-Gv-JPM"/>
-                            </constraints>
+                            <rect key="frame" x="0.0" y="450.66666666666663" width="341" height="48.333333333333314"/>
                             <state key="normal" backgroundImage="OtherSymptomsButton"/>
+                            <state key="selected" backgroundImage="OtherSymptomsButton_Selected"/>
                         </button>
                     </subviews>
-                </stackView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SymptomsToday" translatesAutoresizingMaskIntoConstraints="NO" id="8Md-Wi-uVx">
-                    <rect key="frame" x="50" y="44" width="364" height="194"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="8Md-Wi-uVx" secondAttribute="height" multiplier="15:8" id="Epl-h1-D7Y"/>
+                        <constraint firstAttribute="trailing" secondItem="gVh-TZ-dYr" secondAttribute="trailing" id="1I6-f3-BfJ"/>
+                        <constraint firstItem="bDp-nU-fcm" firstAttribute="centerX" secondItem="yKF-Yc-ieG" secondAttribute="centerX" id="4Q3-Xn-hw9"/>
+                        <constraint firstAttribute="trailing" secondItem="v0b-Sa-yN1" secondAttribute="trailing" id="Fsz-f0-wEf"/>
+                        <constraint firstAttribute="trailing" secondItem="3Y2-gP-YXz" secondAttribute="trailing" id="H0R-kR-yKy"/>
+                        <constraint firstAttribute="trailing" secondItem="bDp-nU-fcm" secondAttribute="trailing" id="K3Y-a2-Kag"/>
+                        <constraint firstAttribute="trailing" secondItem="WmM-73-lcD" secondAttribute="trailing" id="OwG-ES-SO5"/>
+                        <constraint firstAttribute="trailing" secondItem="Rae-bS-c65" secondAttribute="trailing" id="QEC-oB-ao6"/>
+                        <constraint firstAttribute="width" secondItem="yKF-Yc-ieG" secondAttribute="height" multiplier="151:221" id="RLt-Tm-NbG"/>
+                        <constraint firstAttribute="trailing" secondItem="YHe-VN-N41" secondAttribute="trailing" id="V1A-du-3oA"/>
+                        <constraint firstAttribute="trailing" secondItem="tVM-ZP-u7V" secondAttribute="trailing" id="gln-LK-bUw"/>
+                        <constraint firstAttribute="trailing" secondItem="Bnc-uQ-cf9" secondAttribute="trailing" id="vV7-wD-mbd"/>
                     </constraints>
-                </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZb-xH-Oa5">
-                    <rect key="frame" x="156" y="708" width="114" height="34"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZb-xH-Oa5">
+                    <rect key="frame" x="271" y="697" width="102" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="oZb-xH-Oa5" secondAttribute="height" multiplier="3:1" id="YvJ-Cb-sR8"/>
+                    </constraints>
                     <state key="normal" backgroundImage="SubmitButton_Selected"/>
                 </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="SymptomsToday" translatesAutoresizingMaskIntoConstraints="NO" id="8Md-Wi-uVx">
+                    <rect key="frame" x="33" y="104" width="348" height="79"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8Md-Wi-uVx" secondAttribute="trailing" id="8av-tF-mPw"/>
-                <constraint firstItem="8Md-Wi-uVx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="CtG-6O-inv"/>
-                <constraint firstItem="8Md-Wi-uVx" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="g8L-0W-TKl"/>
-                <constraint firstItem="yKF-Yc-ieG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="oXD-kD-Ni6"/>
-                <constraint firstItem="yKF-Yc-ieG" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="xoe-HR-u4T"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="oZb-xH-Oa5" secondAttribute="trailing" constant="41" id="8W6-Z4-zEO"/>
+                <constraint firstItem="yKF-Yc-ieG" firstAttribute="top" secondItem="8Md-Wi-uVx" secondAttribute="bottom" constant="8" id="8ub-nQ-WNf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="yKF-Yc-ieG" secondAttribute="trailing" constant="39.5" id="CI0-h7-tct"/>
+                <constraint firstItem="8Md-Wi-uVx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Obi-ix-Ku0"/>
+                <constraint firstItem="yKF-Yc-ieG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="33.5" id="jQb-JM-pvf"/>
+                <constraint firstItem="oZb-xH-Oa5" firstAttribute="top" secondItem="yKF-Yc-ieG" secondAttribute="bottom" constant="7" id="laG-ww-qFc"/>
+                <constraint firstItem="8Md-Wi-uVx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="33" id="myt-c3-G3n"/>
+                <constraint firstItem="8Md-Wi-uVx" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="qGU-JY-8DY"/>
             </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="137.68115942028987" y="87.723214285714278"/>
+            <point key="canvasLocation" x="136.80000000000001" y="87.706146926536732"/>
         </view>
     </objects>
     <resources>
         <image name="AchesButton" width="302" height="42"/>
+        <image name="AchesButton_Selected" width="302" height="42"/>
         <image name="BreathlessnessButton" width="302" height="42"/>
+        <image name="BreathlessnessButton_Selected" width="302" height="42"/>
         <image name="CoughButton" width="302" height="42"/>
+        <image name="CoughButton_Selected" width="302" height="42"/>
         <image name="DiarrheaButton" width="302" height="42"/>
+        <image name="DiarrheaButton_Selected" width="302" height="42"/>
         <image name="FeverButton" width="302" height="42"/>
+        <image name="FeverButton_Selected" width="302" height="42"/>
         <image name="LostButton" width="302" height="42"/>
+        <image name="LostButton_Selected" width="302" height="42"/>
         <image name="NoSymptomsButton" width="302" height="42"/>
+        <image name="NoSymptomsButton_Selected" width="302" height="42"/>
         <image name="NoseButton" width="302" height="42"/>
+        <image name="NoseButton_Selected" width="302" height="42"/>
         <image name="OtherSymptomsButton" width="302" height="42"/>
+        <image name="OtherSymptomsButton_Selected" width="302" height="42"/>
         <image name="SubmitButton_Selected" width="114" height="34"/>
         <image name="SymptomsToday" width="328" height="79"/>
     </resources>
