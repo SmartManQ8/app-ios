@@ -23,18 +23,73 @@
                         <constraint firstAttribute="width" secondItem="9ol-aO-EcB" secondAttribute="height" multiplier="15:8" id="BX2-ML-eME"/>
                     </constraints>
                 </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4S4-cy-maM">
+                    <rect key="frame" x="50" y="309" width="314" height="278"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bAq-h3-rX1">
+                            <rect key="frame" x="0.0" y="0.0" width="279" height="135"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCv-EJ-6PA">
+                                    <rect key="frame" x="0.0" y="0.0" width="134" height="135"/>
+                                    <state key="normal" backgroundImage="MouthButton"/>
+                                    <state key="highlighted" backgroundImage="MouthButton_Selected"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z3j-aY-bbE">
+                                    <rect key="frame" x="144" y="0.0" width="135" height="135"/>
+                                    <state key="normal" backgroundImage="EarButton"/>
+                                    <state key="highlighted" backgroundImage="EarButton_Selected"/>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ysv-Xa-xtm">
+                            <rect key="frame" x="0.0" y="145" width="276" height="133"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Cj-d5-tAQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="133" height="133"/>
+                                    <state key="normal" backgroundImage="ArmpitButton"/>
+                                    <state key="highlighted" backgroundImage="ArmpitButton_Selected"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKa-nE-5Ko">
+                                    <rect key="frame" x="143" y="0.0" width="133" height="133"/>
+                                    <state key="normal" backgroundImage="OtherButton"/>
+                                    <state key="highlighted" backgroundImage="OtherButton_Selected"/>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08N-4L-XSL">
+                    <rect key="frame" x="50" y="637" width="30" height="30"/>
+                    <state key="normal" title="Skip">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="08N-4L-XSL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="05n-sX-KKX"/>
+                <constraint firstItem="08N-4L-XSL" firstAttribute="top" secondItem="4S4-cy-maM" secondAttribute="bottom" constant="50" id="9Jc-bW-ZoJ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9ol-aO-EcB" secondAttribute="trailing" id="Flh-zG-rL7"/>
+                <constraint firstItem="4S4-cy-maM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="HiT-mu-ymM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4S4-cy-maM" secondAttribute="trailing" constant="50" id="g04-hd-FzF"/>
                 <constraint firstItem="9ol-aO-EcB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="lcr-qL-3Af"/>
                 <constraint firstItem="9ol-aO-EcB" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="-50" id="mK2-K6-wUQ"/>
+                <constraint firstItem="4S4-cy-maM" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="pOu-0s-aFf"/>
+                <constraint firstItem="4S4-cy-maM" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="uA9-Km-Hfr"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="139" y="92"/>
         </view>
     </objects>
     <resources>
+        <image name="ArmpitButton" width="133" height="133"/>
+        <image name="ArmpitButton_Selected" width="133" height="133"/>
+        <image name="EarButton" width="135" height="135"/>
+        <image name="EarButton_Selected" width="135" height="135"/>
+        <image name="MouthButton" width="134" height="134"/>
+        <image name="MouthButton_Selected" width="134" height="134"/>
+        <image name="OtherButton" width="133" height="133"/>
+        <image name="OtherButton_Selected" width="133" height="133"/>
         <image name="TemperatureWhereLabel" width="375" height="109"/>
     </resources>
 </document>

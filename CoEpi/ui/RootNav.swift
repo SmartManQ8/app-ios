@@ -27,6 +27,7 @@ enum RootNavDestination {
     case fever1
     case fever2
     case fever3
+    case fever3Other
     case fever4
     case symptomReport
 }

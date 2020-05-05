@@ -35,7 +35,7 @@
                                         <constraint firstAttribute="width" secondItem="0Ao-xA-I4m" secondAttribute="height" multiplier="73:24" id="vFU-j4-dYF"/>
                                     </constraints>
                                     <nil key="textColor"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTV-8R-TrN">
@@ -76,13 +76,21 @@
                         <constraint firstAttribute="trailing" secondItem="NFT-QM-gCK" secondAttribute="trailing" id="vIK-sF-ard"/>
                     </constraints>
                 </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fY1-7k-Cio">
+                    <rect key="frame" x="50" y="577.5" width="30" height="30"/>
+                    <state key="normal" title="Skip">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="0Bb-Lr-D2i" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="6dD-Tf-hTj"/>
+                <constraint firstItem="fY1-7k-Cio" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="7bS-wE-4TJ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="A8h-nP-Yxg" secondAttribute="trailing" id="Byc-SZ-97M"/>
                 <constraint firstItem="A8h-nP-Yxg" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="-50" id="CIR-Td-LVm"/>
                 <constraint firstItem="0Bb-Lr-D2i" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Day-94-aex"/>
+                <constraint firstItem="fY1-7k-Cio" firstAttribute="top" secondItem="0Bb-Lr-D2i" secondAttribute="bottom" constant="50" id="KDX-yu-U5n"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0Bb-Lr-D2i" secondAttribute="trailing" constant="50" id="pNp-AI-AoF"/>
                 <constraint firstItem="A8h-nP-Yxg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="qYk-yw-WuF"/>
                 <constraint firstItem="0Bb-Lr-D2i" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="vlh-Qb-ReD"/>

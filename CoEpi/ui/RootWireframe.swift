@@ -69,6 +69,7 @@ class RootWireFrame {
         case .fever1: showFever1()
         case .fever2: showFever2()
         case .fever3: showFever3()
+        case .fever3Other: showFever3Other()
         case .fever4: showFever4()
         case .symptomReport: showSymptomReport()
         }
@@ -139,6 +140,12 @@ class RootWireFrame {
         let viewModel: FeverViewModel3 = try! container.resolve()
         let feverViewController3 = FeverViewController3(viewModel: viewModel)
         rootNavigationController.pushViewController(feverViewController3, animated: true)
+    }
+    
+    private func showFever3Other() {
+        let viewModel: FeverViewModel3Other = try! container.resolve()
+        let feverViewController3Other = FeverViewController3Other(viewModel: viewModel)
+        rootNavigationController.pushViewController(feverViewController3Other, animated: true)
     }
     
     private func showFever4() {

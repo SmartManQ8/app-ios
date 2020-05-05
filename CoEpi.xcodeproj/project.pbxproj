@@ -50,6 +50,9 @@
 		622AC2F7245FDA0300A6EB90 /* SymptomReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 622AC2F6245FDA0300A6EB90 /* SymptomReportViewController.xib */; };
 		622AC2F9245FDA1300A6EB90 /* SymptomReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622AC2F8245FDA1300A6EB90 /* SymptomReportViewController.swift */; };
 		622AC2FB245FDA2000A6EB90 /* SymptomReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622AC2FA245FDA2000A6EB90 /* SymptomReportViewModel.swift */; };
+		622AC2FD2461DC1400A6EB90 /* FeverViewModel3Other.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622AC2FC2461DC1400A6EB90 /* FeverViewModel3Other.swift */; };
+		622AC2FF2461DC5400A6EB90 /* FeverViewController3Other.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622AC2FE2461DC5400A6EB90 /* FeverViewController3Other.swift */; };
+		622AC3012461DCD700A6EB90 /* FeverViewController3Other.xib in Resources */ = {isa = PBXBuildFile; fileRef = 622AC3002461DCD700A6EB90 /* FeverViewController3Other.xib */; };
 		62983D8F243CE25F00B0294C /* RootWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF972324280ABA001ADD6B /* RootWireframe.swift */; };
 		62983D90243CE39E00B0294C /* HealthQuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE98BE98242DDCBC00EFB67A /* HealthQuizViewModel.swift */; };
 		62983D91243CE60600B0294C /* RealmDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A4B9B7242CC97600516F3B /* RealmDao.swift */; };
@@ -282,6 +285,9 @@
 		622AC2F6245FDA0300A6EB90 /* SymptomReportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SymptomReportViewController.xib; sourceTree = "<group>"; };
 		622AC2F8245FDA1300A6EB90 /* SymptomReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomReportViewController.swift; sourceTree = "<group>"; };
 		622AC2FA245FDA2000A6EB90 /* SymptomReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomReportViewModel.swift; sourceTree = "<group>"; };
+		622AC2FC2461DC1400A6EB90 /* FeverViewModel3Other.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeverViewModel3Other.swift; sourceTree = "<group>"; };
+		622AC2FE2461DC5400A6EB90 /* FeverViewController3Other.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeverViewController3Other.swift; sourceTree = "<group>"; };
+		622AC3002461DCD700A6EB90 /* FeverViewController3Other.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeverViewController3Other.xib; sourceTree = "<group>"; };
 		74BF972AC9A1ED47A016DA3D /* Pods-CoEpi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoEpi.release.xcconfig"; path = "Target Support Files/Pods-CoEpi/Pods-CoEpi.release.xcconfig"; sourceTree = "<group>"; };
 		83D98C7D6EAEBFA0E5292E3F /* Pods_CoEpi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoEpi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		841D399F244E3EE200A9CD64 /* StartPermissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPermissions.swift; sourceTree = "<group>"; };
@@ -549,14 +555,17 @@
 				622AC2DD245FD22400A6EB90 /* FeverViewModel1.swift */,
 				622AC2DF245FD23A00A6EB90 /* FeverViewModel2.swift */,
 				622AC2E1245FD25900A6EB90 /* FeverViewModel3.swift */,
+				622AC2FC2461DC1400A6EB90 /* FeverViewModel3Other.swift */,
 				622AC2E3245FD29300A6EB90 /* FeverViewModel4.swift */,
 				622AC2E5245FD2C300A6EB90 /* FeverViewController1.swift */,
 				622AC2E7245FD2DA00A6EB90 /* FeverViewController2.swift */,
 				622AC2E9245FD2F400A6EB90 /* FeverViewController3.swift */,
+				622AC2FE2461DC5400A6EB90 /* FeverViewController3Other.swift */,
 				622AC2EB245FD30500A6EB90 /* FeverViewController4.swift */,
 				622AC2ED245FD31800A6EB90 /* FeverViewController1.xib */,
 				622AC2EF245FD32700A6EB90 /* FeverViewController2.xib */,
 				622AC2F1245FD33200A6EB90 /* FeverViewController3.xib */,
+				622AC3002461DCD700A6EB90 /* FeverViewController3Other.xib */,
 				622AC2F3245FD34300A6EB90 /* FeverViewController4.xib */,
 			);
 			path = Fever;
@@ -1223,6 +1232,7 @@
 				622AC2CE245FC5EF00A6EB90 /* CoughViewController2.xib in Resources */,
 				CE98BE9F242DE02900EFB67A /* HealthQuizViewController.xib in Resources */,
 				849DFE722427D37A0008ED65 /* Assets.xcassets in Resources */,
+				622AC3012461DCD700A6EB90 /* FeverViewController3Other.xib in Resources */,
 				054A34F2244E61B600282E17 /* swiftgen.yml in Resources */,
 				30EF953224313F61007D61C7 /* Roboto-Bold.ttf in Resources */,
 				622AC2F2245FD33200A6EB90 /* FeverViewController3.xib in Resources */,
@@ -1464,6 +1474,7 @@
 				849D1B0A2439F31D00804511 /* DaoError.swift in Sources */,
 				8491497B24366FF000975344 /* PeriodicCenKeysFetcher.swift in Sources */,
 				622AC2C0245F65FB00A6EB90 /* ThankYouViewModel.swift in Sources */,
+				622AC2FF2461DC5400A6EB90 /* FeverViewController3Other.swift in Sources */,
 				84BF972E24281082001ADD6B /* uuids.swift in Sources */,
 				84BF973024281082001ADD6B /* DataRepresentable.swift in Sources */,
 				84F93BF92451C32100B5F54D /* NotificationShower.swift in Sources */,
@@ -1481,6 +1492,7 @@
 				84201698244CA18D000EE281 /* UIView+ActivityIndicator.swift in Sources */,
 				CE6B7AC72433279000C42280 /* CENKeyRepo.swift in Sources */,
 				CE6B7AB9243316B800C42280 /* CEN.swift in Sources */,
+				622AC2FD2461DC1400A6EB90 /* FeverViewModel3Other.swift in Sources */,
 				CE98BEA1242DE23400EFB67A /* HealthQuizViewController.swift in Sources */,
 				CE6B7AC3243326FD00C42280 /* CENKey.swift in Sources */,
 				622AC2D2245FC64F00A6EB90 /* CoughViewController1.swift in Sources */,

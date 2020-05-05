@@ -9,32 +9,69 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeverViewController2" customModule="CoEpi" customModuleProvider="target">
             <connections>
-                <outlet property="view" destination="iN0-l3-epB" id="rgw-rF-fIi"/>
+                <outlet property="view" destination="fqk-7Y-tsn" id="URl-ch-Yyr"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="fqk-7Y-tsn">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TemperatureHaveLabel" translatesAutoresizingMaskIntoConstraints="NO" id="yWA-fc-Gbm">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TemperatureHaveLabel" translatesAutoresizingMaskIntoConstraints="NO" id="nUQ-XD-nKz">
                     <rect key="frame" x="0.0" y="-6" width="414" height="221"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="yWA-fc-Gbm" secondAttribute="height" multiplier="15:8" id="UeI-gt-Klc"/>
+                        <constraint firstAttribute="width" secondItem="nUQ-XD-nKz" secondAttribute="height" multiplier="15:8" id="4sP-kt-za4"/>
                     </constraints>
                 </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="254-kF-X3f">
+                    <rect key="frame" x="10" y="352" width="394" height="192"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rgv-nK-1cg">
+                            <rect key="frame" x="0.0" y="0.0" width="192" height="192"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Rgv-nK-1cg" secondAttribute="height" multiplier="1:1" id="tv0-zK-SGy"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="YesButton"/>
+                            <state key="highlighted" backgroundImage="YesButton_Selected"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmj-hv-Hof">
+                            <rect key="frame" x="202" y="0.0" width="192" height="192"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="cmj-hv-Hof" secondAttribute="height" multiplier="1:1" id="xYv-pZ-RMz"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="NoButton"/>
+                            <state key="highlighted" backgroundImage="NoButton_Selected"/>
+                        </button>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="771-7N-LM0">
+                    <rect key="frame" x="50" y="594" width="30" height="30"/>
+                    <state key="normal" title="Skip">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="yWA-fc-Gbm" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="-50" id="dOy-Du-cwb"/>
-                <constraint firstItem="yWA-fc-Gbm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="kEG-6b-LkI"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="yWA-fc-Gbm" secondAttribute="trailing" id="nAT-QJ-C8w"/>
+                <constraint firstItem="qJd-k4-NRR" firstAttribute="trailing" secondItem="254-kF-X3f" secondAttribute="trailing" constant="10" id="B4n-Rj-e9t"/>
+                <constraint firstItem="nUQ-XD-nKz" firstAttribute="top" secondItem="qJd-k4-NRR" secondAttribute="top" constant="-50" id="Qc3-W0-cbL"/>
+                <constraint firstItem="nUQ-XD-nKz" firstAttribute="leading" secondItem="qJd-k4-NRR" secondAttribute="leading" id="Tgr-Qu-B3i"/>
+                <constraint firstItem="qJd-k4-NRR" firstAttribute="trailing" secondItem="nUQ-XD-nKz" secondAttribute="trailing" id="Vh7-u8-Fmx"/>
+                <constraint firstItem="771-7N-LM0" firstAttribute="leading" secondItem="qJd-k4-NRR" secondAttribute="leading" constant="50" id="bgb-6z-Boi"/>
+                <constraint firstItem="254-kF-X3f" firstAttribute="leading" secondItem="qJd-k4-NRR" secondAttribute="leading" constant="10" id="iCF-Z9-0fS"/>
+                <constraint firstItem="771-7N-LM0" firstAttribute="top" secondItem="254-kF-X3f" secondAttribute="bottom" constant="50" id="nWS-eW-hBT"/>
+                <constraint firstItem="254-kF-X3f" firstAttribute="centerY" secondItem="fqk-7Y-tsn" secondAttribute="centerY" id="rMV-oK-rrF"/>
+                <constraint firstItem="254-kF-X3f" firstAttribute="centerX" secondItem="fqk-7Y-tsn" secondAttribute="centerX" id="w6t-Qc-8Bt"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="139" y="92"/>
+            <viewLayoutGuide key="safeArea" id="qJd-k4-NRR"/>
+            <point key="canvasLocation" x="137.68115942028987" y="91.741071428571431"/>
         </view>
     </objects>
     <resources>
+        <image name="NoButton" width="158" height="158"/>
+        <image name="NoButton_Selected" width="158" height="158"/>
         <image name="TemperatureHaveLabel" width="375" height="109"/>
+        <image name="YesButton" width="159" height="159"/>
+        <image name="YesButton_Selected" width="159" height="159"/>
     </resources>
 </document>

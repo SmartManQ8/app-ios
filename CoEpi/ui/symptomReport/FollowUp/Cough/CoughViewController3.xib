@@ -23,11 +23,43 @@
                         <constraint firstAttribute="width" secondItem="gWz-1A-4PQ" secondAttribute="height" multiplier="15:8" id="Vwn-TQ-3jd"/>
                     </constraints>
                 </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Jh3-AA-7SI">
+                    <rect key="frame" x="50" y="332" width="314" height="232"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRl-UE-BCP">
+                            <rect key="frame" x="0.0" y="0.0" width="314" height="62"/>
+                            <state key="normal" backgroundImage="BetterButton"/>
+                            <state key="highlighted" backgroundImage="BetterButton_Selected"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ui-1B-6uO">
+                            <rect key="frame" x="0.0" y="87" width="314" height="59"/>
+                            <state key="normal" backgroundImage="WorseButton"/>
+                            <state key="highlighted" backgroundImage="WorseButton_Selected"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VxT-rb-ljy">
+                            <rect key="frame" x="0.0" y="171" width="314" height="61"/>
+                            <state key="normal" backgroundImage="SameButton"/>
+                            <state key="highlighted" backgroundImage="SameButton_Selected"/>
+                        </button>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="487-Y9-TrA">
+                    <rect key="frame" x="50" y="614" width="30" height="30"/>
+                    <state key="normal" title="Skip">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="gWz-1A-4PQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="JkH-cb-ynP"/>
+                <constraint firstItem="Jh3-AA-7SI" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="O6J-H8-phY"/>
+                <constraint firstItem="487-Y9-TrA" firstAttribute="top" secondItem="Jh3-AA-7SI" secondAttribute="bottom" constant="50" id="Xyz-sX-NtB"/>
+                <constraint firstItem="487-Y9-TrA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="acw-NU-Okx"/>
                 <constraint firstItem="gWz-1A-4PQ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="-50" id="bRI-he-WJC"/>
+                <constraint firstItem="Jh3-AA-7SI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="epm-en-9hg"/>
+                <constraint firstItem="Jh3-AA-7SI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="gsb-x5-5HF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Jh3-AA-7SI" secondAttribute="trailing" constant="50" id="vRE-Iu-vpp"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gWz-1A-4PQ" secondAttribute="trailing" id="zrk-wt-peY"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
@@ -35,6 +67,12 @@
         </view>
     </objects>
     <resources>
+        <image name="BetterButton" width="302" height="62"/>
+        <image name="BetterButton_Selected" width="302" height="62"/>
         <image name="CoughTodayLabel" width="375" height="109"/>
+        <image name="SameButton" width="302" height="61"/>
+        <image name="SameButton_Selected" width="302" height="61"/>
+        <image name="WorseButton" width="302" height="59"/>
+        <image name="WorseButton_Selected" width="302" height="59"/>
     </resources>
 </document>

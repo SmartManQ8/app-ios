@@ -31,6 +31,6 @@ class HomeViewModel {
     }
     
     func testTapped() {
-        rootNav.navigate(command: .to(destination: .cough2))
+        rootNav.navigate(command: .to(destination: .fever3Other))
     }
 }

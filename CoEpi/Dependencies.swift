@@ -35,7 +35,7 @@ class Dependencies {
         container.register { CoughViewModel3() }
         container.register { FeverViewModel1() }
         container.register { FeverViewModel2() }
-        container.register { FeverViewModel3() }
+        container.register { FeverViewModel3Other() }
         container.register { FeverViewModel4() }
         container.register { SymptomReportViewModel() }
         
