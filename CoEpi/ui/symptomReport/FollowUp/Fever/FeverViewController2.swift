@@ -1,10 +1,10 @@
 import UIKit
 
-class FeverViewController3: UIViewController {
-    private let viewModel: FeverViewModel3
+class FeverViewController2: UIViewController {
+    private let viewModel: FeverViewModel2
     
     
-    init(viewModel: FeverViewModel3) {
+    init(viewModel: FeverViewModel2) {
         self.viewModel = viewModel
         super.init(nibName: String(describing: Self.self), bundle: nil)
         self.title = self.viewModel.title
@@ -16,6 +16,7 @@ class FeverViewController3: UIViewController {
     }
 
     override func viewDidLoad() {
-
+        super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background_white.png")!)
      }
 }

@@ -16,9 +16,25 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HighestTemperatureLabel" translatesAutoresizingMaskIntoConstraints="NO" id="hmu-eX-uUY">
+                    <rect key="frame" x="0.0" y="-6" width="414" height="221"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="hmu-eX-uUY" secondAttribute="height" multiplier="15:8" id="LWR-kw-JGT"/>
+                    </constraints>
+                </imageView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hmu-eX-uUY" secondAttribute="trailing" id="TpP-ci-8Dp"/>
+                <constraint firstItem="hmu-eX-uUY" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="-50" id="YOx-h9-PWH"/>
+                <constraint firstItem="hmu-eX-uUY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="kwG-ha-vLp"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="139" y="92"/>
         </view>
     </objects>
+    <resources>
+        <image name="HighestTemperatureLabel" width="375" height="109"/>
+    </resources>
 </document>

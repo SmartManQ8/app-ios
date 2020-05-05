@@ -1,10 +1,10 @@
 import UIKit
 
-class BreathlessViewController: UIViewController {
-    private let viewModel: BreathlessViewModel
+class FeverViewController1: UIViewController {
+    private let viewModel: FeverViewModel1
     
     
-    init(viewModel: BreathlessViewModel) {
+    init(viewModel: FeverViewModel1) {
         self.viewModel = viewModel
         super.init(nibName: String(describing: Self.self), bundle: nil)
         self.title = self.viewModel.title
@@ -16,7 +16,7 @@ class BreathlessViewController: UIViewController {
     }
 
     override func viewDidLoad() {
-
+        super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background_white.png")!)
      }
 }
-

@@ -1,10 +1,19 @@
 import UIKit
 
-class CoughViewController3: UIViewController {
-    private let viewModel: CoughViewModel3
+class CoughViewController1: UIViewController {
+    private let viewModel: CoughViewModel1
     
     
-    init(viewModel: CoughViewModel3) {
+    //Button Labels
+    
+    
+    //Button Actions
+    
+    
+    
+    
+    
+    init(viewModel: CoughViewModel1) {
         self.viewModel = viewModel
         super.init(nibName: String(describing: Self.self), bundle: nil)
         self.title = self.viewModel.title
@@ -16,6 +25,7 @@ class CoughViewController3: UIViewController {
     }
 
     override func viewDidLoad() {
-
+        super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background_white.png")!)
      }
 }

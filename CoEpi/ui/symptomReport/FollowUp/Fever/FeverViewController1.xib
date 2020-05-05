@@ -16,9 +16,25 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FeverDaysLabel" translatesAutoresizingMaskIntoConstraints="NO" id="VwW-Ca-FW0">
+                    <rect key="frame" x="0.0" y="-6" width="414" height="221"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="VwW-Ca-FW0" secondAttribute="height" multiplier="414:221" id="x9G-Al-qHd"/>
+                    </constraints>
+                </imageView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="VwW-Ca-FW0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" constant="-50" id="MaJ-6m-OuT"/>
+                <constraint firstItem="VwW-Ca-FW0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fXN-Cw-UmB"/>
+                <constraint firstItem="VwW-Ca-FW0" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="oVd-tJ-YOy"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="139" y="92"/>
+            <point key="canvasLocation" x="137.68115942028987" y="91.741071428571431"/>
         </view>
     </objects>
+    <resources>
+        <image name="FeverDaysLabel" width="375" height="109"/>
+    </resources>
 </document>

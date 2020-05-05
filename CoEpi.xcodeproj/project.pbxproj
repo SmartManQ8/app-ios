@@ -594,6 +594,7 @@
 				622AC2F6245FDA0300A6EB90 /* SymptomReportViewController.xib */,
 				622AC2F8245FDA1300A6EB90 /* SymptomReportViewController.swift */,
 				622AC2FA245FDA2000A6EB90 /* SymptomReportViewModel.swift */,
+				622AC2C1245FBCEA00A6EB90 /* FollowUp */,
 			);
 			path = symptomReport;
 			sourceTree = "<group>";
@@ -1017,7 +1018,6 @@
 				CE98BE9E242DE02900EFB67A /* HealthQuizViewController.xib */,
 				CE98BE98242DDCBC00EFB67A /* HealthQuizViewModel.swift */,
 				CE98BE9A242DDCFD00EFB67A /* QuestionCell.swift */,
-				622AC2C1245FBCEA00A6EB90 /* FollowUp */,
 			);
 			path = healthquiz;
 			sourceTree = "<group>";

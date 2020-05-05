@@ -4,5 +4,5 @@ import RxSwift
 import os.log
 
 class CoughViewModel2 {
-    let title = "Follow up: Cough2"
+    let title = "Follow up: Cough"
 }

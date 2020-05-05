@@ -16,9 +16,25 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CoughTodayLabel" translatesAutoresizingMaskIntoConstraints="NO" id="gWz-1A-4PQ">
+                    <rect key="frame" x="0.0" y="-6" width="414" height="221"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="gWz-1A-4PQ" secondAttribute="height" multiplier="15:8" id="Vwn-TQ-3jd"/>
+                    </constraints>
+                </imageView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gWz-1A-4PQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="JkH-cb-ynP"/>
+                <constraint firstItem="gWz-1A-4PQ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="-50" id="bRI-he-WJC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gWz-1A-4PQ" secondAttribute="trailing" id="zrk-wt-peY"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="139" y="92"/>
         </view>
     </objects>
+    <resources>
+        <image name="CoughTodayLabel" width="375" height="109"/>
+    </resources>
 </document>
