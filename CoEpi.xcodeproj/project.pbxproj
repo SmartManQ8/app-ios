@@ -536,12 +536,13 @@
 				622AC2BF245F65FB00A6EB90 /* ThankYouViewModel.swift */,
 			);
 			name = thankYou;
-			path = ../..;
+			path = ../../../..;
 			sourceTree = "<group>";
 		};
 		622AC2C1245FBCEA00A6EB90 /* FollowUp */ = {
 			isa = PBXGroup;
 			children = (
+				622AC2BA245CB93B00A6EB90 /* thankYou */,
 				622AC2C4245FBD5C00A6EB90 /* Breathless */,
 				622AC2C3245FBD3800A6EB90 /* Cough */,
 				622AC2C2245FBD0400A6EB90 /* Fever */,
@@ -920,7 +921,6 @@
 			isa = PBXGroup;
 			children = (
 				622AC2F5245FD9BD00A6EB90 /* symptomReport */,
-				622AC2BA245CB93B00A6EB90 /* thankYou */,
 				8420169B244CA3D9000EE281 /* activity indicator */,
 				841D399E244E3EAF00A9CD64 /* permissions */,
 				84EE1C5B2441D7220055E22B /* common */,

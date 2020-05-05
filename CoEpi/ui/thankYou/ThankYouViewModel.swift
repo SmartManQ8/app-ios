@@ -4,5 +4,5 @@ import RxSwift
 import os.log
 
 class ThankYouViewModel {
-    let title = "Thanks!"
+    let title = ""
 }

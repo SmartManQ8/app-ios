@@ -16,9 +16,48 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="yMK-2h-s60">
+                    <rect key="frame" x="50" y="94" width="314" height="324"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ThanksLabel" translatesAutoresizingMaskIntoConstraints="NO" id="iOu-xh-iaI">
+                            <rect key="frame" x="25" y="0.0" width="289" height="108"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="my4-ZR-U1u">
+                            <rect key="frame" x="12" y="138" width="302" height="42"/>
+                            <state key="normal" backgroundImage="MoreSymptomsButton"/>
+                            <state key="highlighted" backgroundImage="MoreSymptomsButton_Selected"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLB-Jd-ZYK">
+                            <rect key="frame" x="12" y="210" width="302" height="42"/>
+                            <state key="normal" backgroundImage="ViewExposuresButton"/>
+                            <state key="highlighted" backgroundImage="ViewExposuresButton_Selected"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycx-9P-MPc">
+                            <rect key="frame" x="12" y="282" width="302" height="42"/>
+                            <state key="normal" backgroundImage="ReturnHomeButton"/>
+                            <state key="highlighted" backgroundImage="ReturnHomeButton_Selected"/>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="yMK-2h-s60" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="50" id="G19-rG-5RA"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="yMK-2h-s60" secondAttribute="trailing" constant="50" id="our-mk-sEk"/>
+                <constraint firstItem="yMK-2h-s60" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="wgd-F1-u8T"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="139" y="131"/>
         </view>
     </objects>
+    <resources>
+        <image name="MoreSymptomsButton" width="302" height="42"/>
+        <image name="MoreSymptomsButton_Selected" width="302" height="42"/>
+        <image name="ReturnHomeButton" width="302" height="42"/>
+        <image name="ReturnHomeButton_Selected" width="302" height="42"/>
+        <image name="ThanksLabel" width="289" height="108"/>
+        <image name="ViewExposuresButton" width="302" height="42"/>
+        <image name="ViewExposuresButton_Selected" width="302" height="42"/>
+    </resources>
 </document>
